@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    -webkit-tap-highlight-color: transparent;
+  }
+  body {
+    @apply bg-gray-50 text-gray-900 transition-colors duration-200;
+  }
+  body.dark {
+    @apply bg-slate-900 text-slate-100;
+  }
+  /* High Contrast Mode */
+  body.high-contrast {
+    @apply bg-black text-white;
+  }
+  body.high-contrast .btn-primary {
+    @apply bg-yellow-400 text-black border-2 border-white;
+  }
+}
+
+@layer utilities {
+  .touch-target {
+    @apply min-h-[44px] min-w-[44px];
+  }
+}
